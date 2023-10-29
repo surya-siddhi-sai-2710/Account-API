@@ -1,0 +1,15 @@
+server:
+  port: 8080 
+  
+camel:
+  springboot:
+    name: AccountAPI
+  servlet:
+    mapping:
+      context-path: /*
+  rest:
+    context-path: /
+    
+MOCK_URL:
+  host: ${ACCOUNTS_URL}
+  contextPath: ${ACCOUNTS_CONTEXTPATH}

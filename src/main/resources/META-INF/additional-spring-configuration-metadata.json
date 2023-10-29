@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "ACCOUNT_URL.host",
+    "type": "java.lang.String",
+    "description": "A description for 'ACCOUNT_URL.host'"
+  },
+  {
+    "name": "ACCOUNT_URL.contextPath",
+    "type": "java.lang.String",
+    "description": "A description for 'ACCOUNT_URL.contextPath'"
+  }
+]}
