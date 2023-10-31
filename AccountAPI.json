@@ -1,0 +1,144 @@
+{
+    "openapi" : "3.0.3",
+    "info": {
+        "title": "Account API",
+        "version": "1.0.0",
+        "description": "To provide account details and additional bank info"
+    },
+    "servers": [
+        {
+            "url": "https://5e9e7bff-5357-40b3-9677-34426f080dbe.mock.pstmn.io",
+            "description": "mock server url"
+        }
+    ],
+    "paths": {
+        "/api": {
+            "post": {
+                "summary": "requesting for account details",
+                "requestBody": {
+                    "description": "user sending request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema" : {
+                                "$ref" : "#/components/schemas/AccountRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "success response",
+                        "content": {
+                            "application/json": {
+                                "schema" : {
+                                    "$ref" : "#/components/schemas/AccountResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AccountRequest" : {
+                "type": "object",
+                "properties": {
+                    "accno" : {
+                        "type": "integer"
+                    }
+                }
+            },
+            "AccountResponse":{
+                "type": "object",
+                "properties": {
+                    "AccountResponse" : {
+                        "type": "object",
+                        "properties": {
+                            "accno" : {
+                                "type": "integer"
+                            },
+                            "name" :{
+                                "type": "object",
+                                "properties": {
+                                    "firstName" : {
+                                        "type":"string"
+                                    },
+                                    "lastName"  :{
+                                        "type":"string"
+                                    },
+                                    "surname" : {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "phoneno" : {
+                                "type": "integer"
+                            },
+                            "gender" :{
+                                "type": "string"
+                            },
+                            "amount" : {
+                                "type": "integer"
+                            },
+                            "loan" : {
+                                "type": "object",
+                                "properties": {
+                                    "p_amount" : {
+                                        "type": "integer"
+                                    },
+                                    "rate" : {
+                                        "type": "integer"
+                                    },
+                                    "intrest" : {
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "branch" : {
+                                "type": "string"
+                            },
+                            "zipcode" : {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "BankInfo" : {
+                        "type": "object",
+                        "properties": {
+                            "bankname" : {
+                                "type": "string"
+                            },
+                            "bankrating" : {
+                                "type": "integer"
+                            },
+                            "bankCurrency" : {
+                                "type": "string"
+                            },
+                            "bankmembers" : {
+                                "type": "array",
+                                "items" : {
+                                    "type": "object",
+                                    "properties": {
+                                        "emp1" : {
+                                            "type": "string"
+                                        },
+                                        "emp2" : {
+                                            "type": "string"
+                                        },
+                                        "emp3" : {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

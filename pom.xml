@@ -80,7 +80,7 @@
 			<!--<version>3.20.4</version> -->
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.camel.springboot</groupId>
-		<artifactId>camel-spring-boot-starter</artifactId> 
+		<artifactId>camel-spring-boot-starter</artifactId>
 			</dependency> -->
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
@@ -88,7 +88,7 @@
 			<version>3.18.3</version>
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.camel</groupId>
-		<artifactId>camel-servlet-starter</artifactId> 
+		<artifactId>camel-servlet-starter</artifactId>
 			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -116,14 +116,79 @@
 			<version>3.18.3</version>
 			<!-- <version>3.20.4</version> -->
 		</dependency>
-
+		<!--		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
+		</dependency>-->
+		<!--<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.0</version>
+		</dependency>-->
+		<!--<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core-languages</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-bean</artifactId>
+		</dependency>-->
+		<!-- Testing Dependency -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test-spring-junit5</artifactId>
+			<version>3.18.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>24.1.1-jre</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.camel</groupId>
+		<artifactId>camel-bean</artifactId>
+			</dependency> -->
+		<!-- <dependency> <groupId>org.apache.camel</groupId>
+		<artifactId>camel-http4</artifactId>
+			</dependency> -->
+		<!-- Tracing dependencies -->
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-opentracing-starter</artifactId>
 			<version>3.18.3</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>io.jaegertracing</groupId>
+			<artifactId>jaeger-client</artifactId>
+			<version>0.35.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-jaeger-starter</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.opentracing</groupId>
+			<artifactId>opentracing-api</artifactId>
+			<version>0.33.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.opentracing</groupId>
+			<artifactId>opentracing-util</artifactId>
+			<version>0.33.0</version>
+		</dependency>
+		<!--	<dependency>
+			<groupId>org.jgroups</groupId>
+			<artifactId>jgroups</artifactId>
+			<version>4.2.15.Final-redhat-00001</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.threads</groupId>
+			<artifactId>jboss-threads</artifactId>
+			<version>2.4.0.Final-redhat-00001</version>
+		</dependency>-->
+		<!-- JAXB Dependecny -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jaxb</artifactId>
@@ -135,7 +200,7 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.commons</groupId>
-		<artifactId>commons-lang3</artifactId> 
+		<artifactId>commons-lang3</artifactId>
 			</dependency> -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
@@ -143,7 +208,9 @@
 			<version>3.18.3</version>
 			<!-- use the same version as your Camel core version -->
 		</dependency>
+        
 	</dependencies>
+
 
 	<build>
 		<plugins>

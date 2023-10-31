@@ -31,6 +31,7 @@ public class AccountDetailsRouteBuilder extends RouteBuilder {
 
 		
 		from("direct:invoke-account-details")
+			.routeId("accountRequest")
 			.to("bean:AccountService?method=getAccountRequestBackend")
 			.marshal().jacksonXml(AccountRequestBackend.class)
 //			.log("test log 1")

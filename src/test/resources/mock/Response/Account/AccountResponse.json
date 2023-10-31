@@ -1,0 +1,37 @@
+{
+    "AccountResponse": {
+        "accno": 101,
+        "name": {
+            "firstname": "aaa",
+            "lastname": "bbb",
+            "surname": "ccc"
+        },
+        "phoneno": 123456,
+        "gender": "male",
+        "amount": 1234567,
+        "loan": {
+            "p_amount": 12,
+            "rate": 4,
+            "intrest": 111
+        },
+        "branch": "hyd",
+        "zipcode": 500019
+    },
+    "bankInfo": {
+        "bankName": "HDFC",
+        "bankRating": 5,
+        "bankCurrency": "Rupees",
+        "bankMembers": [
+            {
+                "emp1": "firstEmployee",
+                "emp2": "secondEmployee",
+                "emp3": "thirdEmployee"
+            },
+            {
+                "emp1": "fourthEmployee",
+                "emp2": "fifthEmployee",
+                "emp3": "sixthEmployee"
+            }
+        ]
+    }
+}
