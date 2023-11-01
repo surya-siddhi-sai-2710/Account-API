@@ -8,32 +8,30 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "bankInfo")
+@XmlRootElement(name = "BankInfo")
 public class BankInfoBackend {
 
-	@XmlElement(name = "bankName")
+	@XmlElement(name = "BankName")
 	private String bankName;
-	
-	@XmlElement(name = "bankRating")
+
+	@XmlElement(name = "BankRating")
 	private int bankRating;
-	
-	@XmlElement(name = "bankCurrency")
+
+	@XmlElement(name = "BankCurrency")
 	private String bankCurrency;
-	
+
 	@Autowired
-	@XmlElement(name = "bankMembers")		//main element in loop
+	@XmlElement(name = "BankMembers") // main element in loop
 	private List<BankMembersBackend> bankMembersBackend;
 
-	//default constructor
+	// default constructor
 	public BankInfoBackend() {
 		super();
 	}
 
-	//parameterized constructor
+	// parameterized constructor
 	public BankInfoBackend(String bankName, int bankRating, String bankCurrency) {
 		super();
 		this.bankName = bankName;
@@ -41,7 +39,7 @@ public class BankInfoBackend {
 		this.bankCurrency = bankCurrency;
 	}
 
-	//getters and setters
+	// getters and setters
 	public String getBankName() {
 		return bankName;
 	}
@@ -80,5 +78,5 @@ public class BankInfoBackend {
 		return "BankInfoBackend [bankName=" + bankName + ", bankRating=" + bankRating + ", bankCurrency=" + bankCurrency
 				+ "]";
 	}
-	
+
 }

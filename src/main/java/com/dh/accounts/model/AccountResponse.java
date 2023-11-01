@@ -12,27 +12,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AccountResponse {
 
-	@Autowired
-	@JsonProperty("AccountResponse")
+	@JsonProperty("accountResponse")
 	protected AccountDetailsResponse accountDetailsResponse;
-	
-	@Autowired
-	@JsonProperty("NameType")
+
+	@JsonProperty("nameType")
 	protected NameType nameType;
-	
-	@Autowired
-	@JsonProperty("LoanType")
+
+	@JsonProperty("loanType")
 	protected LoanType loanType;
-	
-	@Autowired
+
 	@JsonProperty("bankInfo")
 	protected BankInfo bankInfo;
-	
-	@Autowired
+
 	@JsonProperty("bankMembers")
 	protected List<BankMembers> bankMembers;
 
-	//getters and setters
+	// getters and setters
 	public AccountDetailsResponse getAccountDetailsResponse() {
 		return accountDetailsResponse;
 	}
@@ -57,8 +52,6 @@ public class AccountResponse {
 		this.loanType = loanType;
 	}
 
-	
-	
 	public BankInfo getBankInfo() {
 		return bankInfo;
 	}
@@ -75,11 +68,11 @@ public class AccountResponse {
 		this.bankMembers = bankMembers;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "AccountResponse [accountDetailsResponse=" + accountDetailsResponse + ", nameType=" + nameType
 				+ ", loanType=" + loanType + "]";
 	}
-	
+
 }

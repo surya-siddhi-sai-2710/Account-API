@@ -1,27 +1,24 @@
 package com.dh.accounts.model;
 
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Component
 public class BankMembers {
 
 	@JsonProperty("emp1")
 	private String emp1;
-	
+
 	@JsonProperty("emp2")
 	private String emp2;
-	
+
 	@JsonProperty("emp3")
 	private String emp3;
 
-	//default constructor
+	// default constructor
 	public BankMembers() {
 		super();
 	}
 
-	//parameterized constructor
+	// parameterized constructor
 	public BankMembers(String emp1, String emp2, String emp3) {
 		super();
 		this.emp1 = emp1;
@@ -29,7 +26,7 @@ public class BankMembers {
 		this.emp3 = emp3;
 	}
 
-	//getters and setters
+	// getters and setters
 	public String getEmp1() {
 		return emp1;
 	}
@@ -54,10 +51,10 @@ public class BankMembers {
 		this.emp3 = emp3;
 	}
 
-	//to String
+	// to String
 	@Override
 	public String toString() {
 		return "BankMembers [emp1=" + emp1 + ", emp2=" + emp2 + ", emp3=" + emp3 + "]";
 	}
-	
+
 }

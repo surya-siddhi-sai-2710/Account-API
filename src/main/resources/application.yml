@@ -10,6 +10,9 @@ camel:
   rest:
     context-path: /
     
-MOCK_URL:
+# =============================================
+# Environment variables
+# ---------------------------------------------
+mockUrl:
   host: ${ACCOUNTS_URL}
   contextPath: ${ACCOUNTS_CONTEXTPATH}

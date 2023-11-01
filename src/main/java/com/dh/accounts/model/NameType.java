@@ -1,26 +1,23 @@
 package com.dh.accounts.model;
 
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Component
 public class NameType {
 
-	@JsonProperty("firstname")
+	@JsonProperty("firstName")
 	private String firstname;
-	
-	@JsonProperty("lastname")
+
+	@JsonProperty("lastName")
 	private String lastname;
-	
-	@JsonProperty("surname")
+
+	@JsonProperty("surName")
 	private String surname;
-	
-	//default constructor
+
+	// default constructor
 	public NameType() {
 		super();
 	}
-	
+
 	// parameterized constructor
 	public NameType(String firstname, String lastname, String surname) {
 		super();
@@ -59,5 +56,5 @@ public class NameType {
 	public String toString() {
 		return "NameType [firstname=" + firstname + ", lastname=" + lastname + ", surname=" + surname + "]";
 	}
-	
+
 }

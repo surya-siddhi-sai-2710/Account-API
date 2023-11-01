@@ -1,42 +1,39 @@
 package com.dh.accounts.model;
 
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Component
 public class AccountDetailsResponse {
 
 	@JsonProperty("accno")
 	private int accno;
-	
+
 	@JsonProperty("name")
 	private NameType name;
-	
-	@JsonProperty("phoneno")
+
+	@JsonProperty("phoneNo")
 	private int phoneno;
-	
+
 	@JsonProperty("gender")
 	private String gender;
-	
+
 	@JsonProperty("amount")
 	private int amount;
-	
+
 	@JsonProperty("loan")
 	private LoanType loan;
-	
+
 	@JsonProperty("branch")
 	private String branch;
-	
-	@JsonProperty("zipcode")
+
+	@JsonProperty("zipCode")
 	private int zipcode;
 
-	//default constructor
+	// default constructor
 	public AccountDetailsResponse() {
 		super();
 	}
-	
-	//Constructor with parameters
+
+	// Constructor with parameters
 	public AccountDetailsResponse(int accno, NameType name, int phoneno, String gender, int amount, LoanType loan,
 			String branch, int zipcode) {
 		super();
@@ -50,7 +47,7 @@ public class AccountDetailsResponse {
 		this.zipcode = zipcode;
 	}
 
-	//getters and setters
+	// getters and setters
 	public int getAccno() {
 		return accno;
 	}
@@ -115,12 +112,12 @@ public class AccountDetailsResponse {
 		this.zipcode = zipcode;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "AccountDetailsResponse [accno=" + accno + ", name=" + name + ", phoneno=" + phoneno + ", gender="
 				+ gender + ", amount=" + amount + ", loan=" + loan + ", branch=" + branch + ", zipcode=" + zipcode
 				+ "]";
 	}
-	
+
 }

@@ -6,39 +6,37 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
-@XmlAccessorType(XmlAccessType.FIELD) 
-@XmlRootElement(name = "account")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Account")
 public class AccountDetailsBackendResponse {
-	
-	@XmlElement(name="accno")
+
+	@XmlElement(name = "Accno")
 	private int accno;
-	
-	@XmlElement(name="name")
+
+	@XmlElement(name = "Name")
 	private NameDetailsBackend name;
-	
-	@XmlElement(name="phoneno")
+
+	@XmlElement(name = "Phoneno")
 	private int phoneno;
-	
-	@XmlElement(name="gender")
+
+	@XmlElement(name = "Gender")
 	private String gender;
-	
-	@XmlElement(name="amount")
+
+	@XmlElement(name = "Amount")
 	private int amount;
-	
+
 	@Autowired
-	@XmlElement(name="loan")
+	@XmlElement(name = "Loan")
 	private LoanDetailsBackend loan;
-	
-	@XmlElement(name="branch")
+
+	@XmlElement(name = "Branch")
 	private String branch;
-	
-	@XmlElement(name="zipcode")
+
+	@XmlElement(name = "Zipcode")
 	private int zipcode;
 
-	//getters and setters
+	// getters and setters
 	public int getAccno() {
 		return accno;
 	}
@@ -103,12 +101,12 @@ public class AccountDetailsBackendResponse {
 		this.zipcode = zipcode;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "AccountDetailsBackendResponse [accno=" + accno + ", name=" + name + ", phoneno=" + phoneno + ", gender="
 				+ gender + ", amount=" + amount + ", loan=" + loan + ", branch=" + branch + ", zipcode=" + zipcode
 				+ "]";
 	}
-	
+
 }

@@ -3,10 +3,10 @@ package com.dh.accounts.model;
 public class AccountDetails {
 
 	private AccountDetailsRequest accountRequest;
-	
+
 	private AccountDetailsResponse accountResponse;
 
-	//getters and setters
+	// getters and setters
 	public AccountDetailsRequest getAccountRequest() {
 		return accountRequest;
 	}
@@ -27,5 +27,5 @@ public class AccountDetails {
 	public String toString() {
 		return "AccountDetails [accountRequest=" + accountRequest + ", accountResponse=" + accountResponse + "]";
 	}
-	
+
 }

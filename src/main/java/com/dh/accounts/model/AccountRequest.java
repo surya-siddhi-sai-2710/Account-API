@@ -1,13 +1,10 @@
 package com.dh.accounts.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AccountRequest {
 
-	@Autowired
-	@JsonProperty("AccountRequest")
+	@JsonProperty("accountRequest")
 	protected AccountDetailsRequest accountDetailsRequest;
 
 	public AccountDetailsRequest getAccountDetailsRequest() {
@@ -17,5 +14,5 @@ public class AccountRequest {
 	public void setAccountDetailsRequest(AccountDetailsRequest accountDetailsRequest) {
 		this.accountDetailsRequest = accountDetailsRequest;
 	}
-	
+
 }

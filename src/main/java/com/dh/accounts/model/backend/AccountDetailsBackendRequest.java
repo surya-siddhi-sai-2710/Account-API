@@ -5,14 +5,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.springframework.stereotype.Component;
-
-@Component
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "account")
+@XmlRootElement(name = "Account")
 public class AccountDetailsBackendRequest {
 
-	@XmlElement(name="accno")
+	@XmlElement(name = "Accno")
 	private int accno;
 
 	public int getAccno() {
@@ -27,5 +24,5 @@ public class AccountDetailsBackendRequest {
 	public String toString() {
 		return "AccountDetailsBackendRequest [accno=" + accno + "]";
 	}
-	
+
 }

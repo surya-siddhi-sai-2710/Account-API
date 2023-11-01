@@ -5,28 +5,24 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.springframework.stereotype.Component;
-
-@Component
-@XmlAccessorType(XmlAccessType.FIELD) 
-@XmlRootElement(name = "loan")		// Separate xml root tag
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Loan") // Separate xml root tag
 public class LoanDetailsBackend {
 
 	@XmlElement
 	private int p_amount;
-	
+
 	@XmlElement
 	private int rate;
-	
+
 	@XmlElement
 	private int intrest;
 
-	
 	// default constructor
 	public LoanDetailsBackend() {
 		super();
 	}
-	
+
 	// parameterized constructor
 	public LoanDetailsBackend(int p_amount, int rate, int intrest) {
 		super();
@@ -35,9 +31,7 @@ public class LoanDetailsBackend {
 		this.intrest = intrest;
 	}
 
-
-
-	//getters and setters
+	// getters and setters
 	public int getP_amount() {
 		return p_amount;
 	}
@@ -62,10 +56,10 @@ public class LoanDetailsBackend {
 		this.intrest = intrest;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "LoanDetailsBackend [p_amount=" + p_amount + ", rate=" + rate + ", intrest=" + intrest + "]";
 	}
-	
+
 }

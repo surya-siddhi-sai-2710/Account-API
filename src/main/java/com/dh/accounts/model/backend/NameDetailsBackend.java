@@ -5,23 +5,20 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.springframework.stereotype.Component;
-
-@Component
-@XmlAccessorType(XmlAccessType.FIELD) 
-@XmlRootElement(name="name")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "Name")
 public class NameDetailsBackend {
 
-	@XmlElement
+	@XmlElement(name = "Firstname")
 	private String firstname;
-	
-	@XmlElement
+
+	@XmlElement(name = "Lastname")
 	private String lastname;
-	
-	@XmlElement
+
+	@XmlElement(name = "Surname")
 	private String surname;
 
-	//getters and setters
+	// getters and setters
 	public String getFirstname() {
 		return firstname;
 	}
@@ -46,10 +43,10 @@ public class NameDetailsBackend {
 		this.surname = surname;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "NameDetailsBackend [firstname=" + firstname + ", lastname=" + lastname + ", surname=" + surname + "]";
 	}
-	
+
 }

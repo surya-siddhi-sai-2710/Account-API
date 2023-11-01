@@ -1,12 +1,9 @@
 package com.dh.accounts.model;
 
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Component
 public class AccountDetailsRequest {
-	
+
 	@JsonProperty("accno")
 	private int accno;
 

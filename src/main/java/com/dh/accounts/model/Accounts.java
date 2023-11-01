@@ -2,7 +2,7 @@ package com.dh.accounts.model;
 
 public class Accounts {
 
-	//parameters
+	// parameters
 	private int accno;
 	private NameType name;
 	private int phoneno;
@@ -11,12 +11,12 @@ public class Accounts {
 	private LoanType loan;
 	private String branch;
 	private int zipcode;
-	
+
 	// default constructor
 	public Accounts() {
 		super();
 	}
-	
+
 	// parameterized constructor
 	public Accounts(int accno, NameType name, int phoneno, String gender, int amount, LoanType loan, String branch,
 			int zipcode) {
@@ -96,7 +96,7 @@ public class Accounts {
 		this.zipcode = zipcode;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "Accounts [accno=" + accno + ", name=" + name + ", phoneno=" + phoneno + ", gender=" + gender

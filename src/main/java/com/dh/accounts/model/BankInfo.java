@@ -2,28 +2,23 @@ package com.dh.accounts.model;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Component
 public class BankInfo {
 
 	@JsonProperty("bankName")
 	private String bankName;
-	
+
 	@JsonProperty("bankRating")
 	private int bankRating;
-	
+
 	@JsonProperty("bankCurrency")
 	private String bankCurrency;
-	
-	@Autowired
+
 	@JsonProperty("bankMembers")
 	private List<BankMembers> bankMembers;
 
-	//default constructor
+	// default constructor
 	public BankInfo() {
 		super();
 	}
@@ -36,7 +31,7 @@ public class BankInfo {
 		this.bankCurrency = bankCurrency;
 	}
 
-	//getters and setters
+	// getters and setters
 	public String getBankName() {
 		return bankName;
 	}
@@ -74,7 +69,5 @@ public class BankInfo {
 	public String toString() {
 		return "BankInfo [bankName=" + bankName + ", bankRating=" + bankRating + ", bankCurrency=" + bankCurrency + "]";
 	}
-	
-	
-	
+
 }

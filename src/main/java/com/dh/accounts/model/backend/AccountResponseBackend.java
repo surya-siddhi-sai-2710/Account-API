@@ -8,29 +8,23 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-@XmlAccessorType(XmlAccessType.FIELD) 
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "AccountResponse")
 public class AccountResponseBackend {
-	
-	@Autowired
-	@XmlElement(name = "account")
-	protected AccountDetailsBackendResponse accountDetailsBackendResponse;
-	
-	@Autowired
-	@XmlElement(name = "loan")
-	protected LoanDetailsBackend loanDetailsBackend;
-	
-	@Autowired
-	@XmlElement(name = "name")
-	protected NameDetailsBackend nameDetailsBackend;
-	
-	@Autowired
-	@XmlElement(name = "bankInfo")
-	protected BankInfoBackend bankInfoBackend;
-	
 
-	//getters and setters
+	@XmlElement(name = "Account")
+	protected AccountDetailsBackendResponse accountDetailsBackendResponse;
+
+	@XmlElement(name = "Loan")
+	protected LoanDetailsBackend loanDetailsBackend;
+
+	@XmlElement(name = "Name")
+	protected NameDetailsBackend nameDetailsBackend;
+
+	@XmlElement(name = "BankInfo")
+	protected BankInfoBackend bankInfoBackend;
+
+	// getters and setters
 	public AccountDetailsBackendResponse getAccountDetailsBackendResponse() {
 		return accountDetailsBackendResponse;
 	}
@@ -54,7 +48,6 @@ public class AccountResponseBackend {
 	public void setNameDetailsBackend(NameDetailsBackend nameDetailsBackend) {
 		this.nameDetailsBackend = nameDetailsBackend;
 	}
-	
 
 	public BankInfoBackend getBankInfoBackend() {
 		return bankInfoBackend;
@@ -64,11 +57,11 @@ public class AccountResponseBackend {
 		this.bankInfoBackend = bankInfoBackend;
 	}
 
-	//toString method
+	// toString method
 	@Override
 	public String toString() {
 		return "AccountResponseBackend [accountDetailsBackendResponse=" + accountDetailsBackendResponse
 				+ ", loanDetailsBackend=" + loanDetailsBackend + ", nameDetailsBackend=" + nameDetailsBackend + "]";
 	}
-	
+
 }
