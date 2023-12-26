@@ -1,0 +1,11 @@
+FROM maven:3.8.1-openjdk-11-slim
+
+EXPOSE 8080
+
+WORKDIR /app
+
+COPY src ./src
+
+RUN mvn clean install
+
+CMD ["java", "-jar", "accountsAPI.jar"]
